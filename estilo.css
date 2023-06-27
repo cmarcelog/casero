@@ -1,0 +1,68 @@
+.modall {
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #8bbee0;
+    display: flex;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .5s .5s;
+    box-shadow: 0px 0px 9px 0px #00478a;
+    text-align: center;
+    color: #0072bb;
+}
+
+.modall--show {
+    z-index: 100;
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(1);
+    --transition: transform .8s .8s;
+}
+
+.modall__container {
+    z-index: 90;
+    margin: auto;
+    width: 65%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 4em;
+    display: grid;
+    gap: 1em;
+    place-items: end;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modall__close {
+    /* text-decoration: none; */
+    color: #fff;
+    background-color: #0072bb;
+    padding: 1em 3em;
+    border: px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+    right: 10px;
+    bottom: 10px;
+}
+
+#btnCalcular {
+    padding: 10px 30px;
+    position: absolute;
+    bottom: -10;
+    right: 40%;
+    color: #fff;
+    background-color: #0072bb;
+    border-radius: 6px;
+}
